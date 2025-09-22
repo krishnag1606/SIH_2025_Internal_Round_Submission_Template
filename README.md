@@ -19,9 +19,10 @@ This README provides an overview of the project, including team details, relevan
 
 ## Project Links
 
-- **SIH Presentation:** [Final SIH Presentation](URL TO PPT UPLOADED TO GITHUB)
+- **SIH Presentation:** [Final SIH Presentation](https://github.com/krishnag1606/SIH_2025_Internal_Round_Submission_Template/blob/main/files/INTERNAL_PPT_Vision_X_India.pdf)
 - **Video Demonstration:** [Watch Video](https://drive.google.com/file/d/1EkSE2a1mgM4dvaTu-feU46Gp9E8wiQ6F/view?usp=sharing)
 - **Source Code:** [GitHub Repository](https://github.com/krishnag1606/SIH_2025_Internal_Round_Submission_Template/tree/main/code)
+
 
 
 
