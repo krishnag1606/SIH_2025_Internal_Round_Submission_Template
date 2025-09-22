@@ -1,0 +1,135 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Language {
+  ENGLISH
+  HINDI
+  PUNJABI
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  OTHER
+}
+
+enum AppointmentStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+}
+
+model Patient {
+  id           Int            @id @default(autoincrement())
+  name         String
+  email        String         @unique
+  phone        String         @unique
+  password     String
+  age          Int
+  gender       Gender
+  address      String?
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  Appointment  Appointment[]
+  Consultation Consultation[]
+  Prescription Prescription[]
+}
+
+model Doctor {
+  id                 Int                  @id @default(autoincrement())
+  name               String
+  email              String               @unique
+  phone              String               @unique
+  password           String
+  specialization     String
+  experience         Int
+  gender             Gender
+  language           DoctorLanguage[]
+  address            String?
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+  Appointment        Appointment[]
+  Consultation       Consultation[]
+  Prescription       Prescription[]
+  DoctorAvailability DoctorAvailability[]
+}
+
+model DoctorLanguage {
+  id       Int      @id @default(autoincrement())
+  doctorId Int
+  language Language
+  doctor   Doctor   @relation(fields: [doctorId], references: [id])
+}
+
+model Appointment {
+  id        Int               @id @default(autoincrement())
+  doctorId  Int
+  patientId Int
+  doctor    Doctor            @relation(fields: [doctorId], references: [id])
+  patient   Patient           @relation(fields: [patientId], references: [id])
+  status    AppointmentStatus @default(CONFIRMED)
+
+  availabilityId Int
+  availability   DoctorAvailability @relation("DoctorAvailabilityToAppointments", fields: [availabilityId], references: [id])
+
+  videoRoomId String?   @unique
+  startedAt   DateTime?
+  endedAt     DateTime?
+
+  createdAt    DateTime       @default(now())
+  Consultation Consultation[]
+}
+
+model DoctorAvailability {
+  id       Int      @id @default(autoincrement())
+  doctorId Int
+  date     DateTime
+  slot     String
+  isBooked Boolean  @default(false)
+
+  doctor       Doctor        @relation(fields: [doctorId], references: [id])
+  appointments Appointment[] @relation("DoctorAvailabilityToAppointments")
+}
+
+model Consultation {
+  id            Int            @id @default(autoincrement())
+  doctorId      Int
+  patientId     Int
+  doctor        Doctor         @relation(fields: [doctorId], references: [id])
+  patient       Patient        @relation(fields: [patientId], references: [id])
+  appointmentId Int
+  appointment   Appointment    @relation(fields: [appointmentId], references: [id])
+  transcript    String?
+  summary       String?
+  diagnosis     String?
+  createdAt     DateTime       @default(now())
+  Prescription  Prescription[]
+}
+
+model Prescription {
+  id             Int          @id @default(autoincrement())
+  consultation   Consultation @relation(fields: [consultationId], references: [id])
+  consultationId Int
+  doctor         Doctor       @relation(fields: [doctorId], references: [id])
+  doctorId       Int
+  patient        Patient      @relation(fields: [patientId], references: [id])
+  patientId      Int
+  notes          String?
+  aiFormatted    String?
+  drugChecks     String?
+  createdAt      DateTime     @default(now())
+}
