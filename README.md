@@ -10,12 +10,12 @@ This README provides an overview of the project, including team details, relevan
 
 **Team Members:**
 
-- **PRABHANSHU KAMAL** - 2023UEE4671 - [@PrabhanshuKamal2121](https://github.com/PrabhanshuKamal2121)
+- **PRABHANSHU KAMAL** - 2023UEE4670 - [@PrabhanshuKamal2121](https://github.com/PrabhanshuKamal2121)
 - **ANMOL GARG** - 2023UEE4672 - @[devanmolx](https://github.com/devanmolx)
 - **KRISHNA GUPTA** - 2023UEE4658 - [@krishnag1606](https://github.com/krishnag1606)
 - **MAYANK GUPTA** - 2023UEE6543 - [@Mayankgupta120404](https://github.com/Mayankgupta120404)
 - **PRERNA MEENA** - 2023UEE4656 - [@Prernameena2408](https://github.com/Prernameena2408)
-- **** - ROLL_NUMBER - [@USERNAME](https://github.com/USERNAME)
+- **LALIT JORWAR** - 2023UEEUCD2153 - [@lalitt-07 ](https://github.com/lalitt-07 )
 
 ## Project Links
 
@@ -24,4 +24,5 @@ This README provides an overview of the project, including team details, relevan
 - **Live Deployment:** [View Deployment](DEPLOYED LINK IF ANY)
 - **Source Code:** [GitHub Repository](GITHUB LINK TO THE REPO)
 - **Additional Resources:** [Other Relevant Links](ANY OTHER RELEVANT LINKS)
+
 
