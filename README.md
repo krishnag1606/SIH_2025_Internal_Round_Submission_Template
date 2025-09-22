@@ -20,9 +20,8 @@ This README provides an overview of the project, including team details, relevan
 ## Project Links
 
 - **SIH Presentation:** [Final SIH Presentation](URL TO PPT UPLOADED TO GITHUB)
-- **Video Demonstration:** [Watch Video](UNLISTED YOUTUBE LINK)
-- **Live Deployment:** [View Deployment](DEPLOYED LINK IF ANY)
-- **Source Code:** [GitHub Repository](GITHUB LINK TO THE REPO)
-- **Additional Resources:** [Other Relevant Links](ANY OTHER RELEVANT LINKS)
+- **Video Demonstration:** [Watch Video](https://drive.google.com/file/d/1EkSE2a1mgM4dvaTu-feU46Gp9E8wiQ6F/view?usp=sharing)
+- **Source Code:** [GitHub Repository](https://github.com/krishnag1606/SIH_2025_Internal_Round_Submission_Template/tree/main/code)
+
 
 
