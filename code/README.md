@@ -26,6 +26,9 @@ This project leverages the following technologies:
 * **[Next.js](https://nextjs.org):** React framework for the web-based patient client with static export capabilities.
 * **[Tailwind CSS](https://tailwindcss.com):** Utility-first CSS framework for rapid UI development and consistent design.
 * **[Lucide React](https://lucide.dev):** Beautiful icon library providing consistent iconography across all platforms.
+* **[LangChain](https://www.langchain.com):** AI interferance with the help of API keys and creating AI agent
+* **[n8n](https://n8n.io):** Tool calling with the help of dynamic AI workflow automation
+* **[Machine Learning](https://scikit-learn.org/stable/):** Building data predictor with the help of multiple algorithms
 
 ---
 
@@ -41,7 +44,8 @@ This project leverages the following technologies:
 * **Health Records:** Digital patient cards with QR codes and consultation history
 * **Emergency Features:** Quick access to emergency services and critical health information
 * **Doctor Dashboard:** Comprehensive interface for managing patients, consultations, and prescriptions
-
+* **Real Time Conversational Agent:** Helping the user to use the power of AI in medical sector while making it offline as well as online
+* **Disease Predictor:** Helping predict major diseases in the state of punjab 
 ---
 
 ## Local Setup Instructions
