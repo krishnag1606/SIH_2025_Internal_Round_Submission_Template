@@ -45,7 +45,7 @@ This project leverages the following technologies:
 * **Emergency Features:** Quick access to emergency services and critical health information
 * **Doctor Dashboard:** Comprehensive interface for managing patients, consultations, and prescriptions
 * **Real Time Conversational Agent:** Helping the user to use the power of AI in medical sector while making it offline as well as online
-* **Disease Predictor:** Helping predict major diseases in the state of punjab 
+* **Disease Predictor:** Helping predict major diseases in the state of Punjab 
 ---
 
 ## Local Setup Instructions
